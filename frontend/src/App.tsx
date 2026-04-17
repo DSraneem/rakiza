@@ -29,7 +29,7 @@ export default function App() {
   const [error, setError]         = useState<string | null>(null)
   const [userId]                  = useState(getUserId)
 
-  const STEP_PCT: Record<Step, string> = {
+  const STEP_PCT: Partial<Record<Step, string>> = {
     role: '20%', task: '40%', teach: '65%', execute: '100%',
     history: '100%', dashboard: '100%',
   }

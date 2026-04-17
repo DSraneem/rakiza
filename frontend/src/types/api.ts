@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const BASE = import.meta.env.PROD
-  ? 'https://rakiza.onrender.com'
-  : '/api'
+const BASE = window.location.hostname === 'localhost'
+  ? '/api'
+  : 'https://rakiza.onrender.com'
 
 export async function uploadFile(file: File): Promise<any> {
   const form = new FormData()
