@@ -36,6 +36,8 @@ interface Props {
   task: string
   useContext: boolean
   uploadedFile: File | null
+  onSessionId?: (id: string) => void
+  sessionId?: string | null
   onTaskChange: (t: string) => void
   onContextChange: (v: boolean) => void
   onFileChange: (f: File | null) => void
